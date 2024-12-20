@@ -123,18 +123,47 @@ src/
 ### 后端项目结构
 ```
 app/
-├── api/              # API路由
-│   ├── v1/          # API版本
-│   └── deps.py      # 依赖项
-├── core/            # 核心配置
-│   └── security.py  # 安全相关
-├── models/          # 数据模型（Tortoise ORM）
-├── schemas/         # Pydantic模型
-├── crud/           # 数据库操作
-├── db/             # 数据库配置
-├── services/       # 业务逻辑
-└── settings/       # 配置文件  
-    └── config.py # 配置文件
+├── api/                    # API路由层
+│   ├── __init__.py
+│   ├── v1/
+│   │   ├── __init__.py
+│   │   ├── user.py        # 用户相关路由
+│   │   ├── note.py        # 笔记相关路由
+│   │   └── admin.py       # 管理后台路由
+│   └── deps.py            # 依赖注入
+│
+├── controllers/           # 业务控制层
+│   ├── __init__.py
+│   ├── user.py           # 用户业务控制
+│   ├── note.py           # 笔记业务控制
+│   └── admin.py          # 管理业务控制
+│
+├── core/                 # 核心组件
+│   ├── __init__.py
+│   ├── config.py         # 配置类
+│   ├── security.py       # 安全相关
+│   ├── crud.py      # CRUD基类
+│   ├── permissions.py    # 权限控制
+│   ├── exceptions.py     # 异常处理
+│   └── middleware.py     # 中间件
+│
+├── log/                  # 日志模块
+│   ├── __init__.py
+│   └── logger.py         # 日志实现
+│
+├── models/               # 数据模型
+│   ├── __init__.py
+│   ├── user.py          # 用户模型
+│   └── transaction.py    # 交易模型
+│
+├── schemas/              # 数据校验
+│   └── __init__.py      
+│
+└── utils/               # 工具类
+    ├── __init__.py
+    ├── jwt.py          # JWT工具
+    ├── crypto.py       # 加密工具
+    └── helpers.py      # 通用工具
 ```
 
 ## 5. 数据库配置
