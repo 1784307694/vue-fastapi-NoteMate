@@ -10,8 +10,9 @@ https://github.com/1784307694/NoteMate
 ## ✨ 特性
 
 - 🚀 采用 FastAPI + Vue3 + Element Plus 等最新技术栈
-- 🔐 完善的 RBAC 权限管理和 JWT 鉴权
-- 🌐 动态路由和菜单配置
+- 🔐 细粒度权限控制：实现按钮和接口级别的权限控制，确保不同用户或角色在界面操作和接口访问时具有不同的权限限制。
+- 🌐 动态路由：后端动态路由，结合 RBAC（Role-Based Access Control）权限模型，提供精细的菜单路由控制。
+- 🔐 JWT鉴权：使用 JSON Web Token（JWT）进行身份验证和授权，增强应用的安全性。
 - 💾 多数据源支持 (MySQL + MongoDB + Redis)
 - 📦 容器化部署，开箱即用
 
