@@ -35,17 +35,26 @@ class Settings(BaseSettings):
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # Token过期时间（7天）
 
 
+    # redis配置
+    REDIS_HOST: str = "xiaocaibao.cn"
+    REDIS_PORT: int = 6379
+    REDIS_DB: int = 0
+    REDIS_PASSWORD: str = "HUANGxun1114"
+    REDIS_ENCODING: str = "utf-8"
+    REDIS_DECODE_RESPONSES: bool = True
+    REDIS_MAX_CONNECTIONS: int = 10000
+    REDIS_SOCKET_TIMEOUT: int = 5
+    REDIS_RETRY_ON_TIMEOUT: bool = True
+    REDIS_URL: str = f"redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}"
+    
+    # 日期时间格式
+    DATETIME_FORMAT: str = "%Y-%m-%d %H:%M:%S"  # 日期时间格式化字符串
+
+
         # 数据库配置
     TORTOISE_ORM: dict = {
         "connections": {
-            # SQLite配置
-            # "sqlite": {
-            #     "engine": "tortoise.backends.sqlite",
-            #     "credentials": {"file_path": f"{BASE_DIR}/db.sqlite3"},
-            # },
-            
-            # MySQL配置
-            "mysql": {
+            "default": {
                 "engine": "tortoise.backends.mysql",
                 "credentials": {
                     "host": "xiaocaibao.cn",
@@ -55,40 +64,35 @@ class Settings(BaseSettings):
                     "database": "test",
                 },
             },
-
-            # PostgreSQL配置（已注释）
-            # "postgres": {
-            #     "engine": "tortoise.backends.asyncpg",
-            #     "credentials": {
-            #         "host": "localhost",
-            #         "port": 5432,
-            #         "user": "yourusername",
-            #         "password": "yourpassword",
-            #         "database": "yourdatabase",
-            #     },
-            # },
-
-            # MSSQL/Oracle配置（已注释）
-            # "oracle": {
-            #     "engine": "tortoise.backends.asyncodbc",
-            #     "credentials": {...},
-            # },
-
-            # SQLServer配置（已注释）
-            # "sqlserver": {
-            #     "engine": "tortoise.backends.asyncodbc",
-            #     "credentials": {...},
-            # },
         },
         "apps": {
             "models": {
-                "models": ["app.models", "aerich.models"],  # 模型路径
-                "default_connection": "sqlite",             # 默认连接
+                "models": ["app.models", "aerich.models"],
+                "default_connection": "default",
             },
         },
-        "use_tz": False,                    # 是否使用时区
-        "timezone": "Asia/Shanghai",        # 时区设置
+        "use_tz": False,
+        "timezone": "Asia/Shanghai",
     }
+    
+    # MongoDB配置
+    MONGODB_HOST: str = "xiaocaibao.cn"
+    MONGODB_PORT: int = 27017
+    MONGODB_USER: str = "xiaocaibao"  # MongoDB用户名
+    MONGODB_PASSWORD: str = "HUANGxun1114"  # MongoDB密码
+    MONGODB_DB_NAME: str = "test"
+    MONGODB_MIN_POOL_SIZE: int = 10
+    MONGODB_MAX_POOL_SIZE: int = 100
+    MONGODB_MAX_IDLE_TIME_MS: int = 10000
+    # 构建MongoDB连接URL
+    MONGODB_URL: str = f"mongodb://{MONGODB_USER}:{MONGODB_PASSWORD}@{MONGODB_HOST}:{MONGODB_PORT}/"
+
+
+    # 邮件配置
+    SMTP_SERVER: str = "smtp.126.com"  # SMTP 服务器地址
+    SMTP_PORT: int = 465  # SMTP 端口（通常是 587 或 465）
+    SMTP_USERNAME: str = "a1784307694@126.com"  # 发件人邮箱
+    SMTP_PASSWORD: str = "YPq5b3AEa6hgg8UZ"  # 发件人邮箱密码
 
 
 

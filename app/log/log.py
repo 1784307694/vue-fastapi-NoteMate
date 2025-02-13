@@ -33,15 +33,19 @@ class Loggin:
         注释:可以通过取消注释logger.add行来启用文件日志
         """
         loguru_logger.remove()  # 移除默认处理器
-        loguru_logger.add(
-            settings.LOGS_ROOT, # 设置日志文件路径
-            sink=sys.stdout,    # 输出到标准输出
-            level=self.level,    # 设置日志级别
-            rotation="100 MB"   # 设置日志文件大小为100MB
-        )
+        # loguru_logger.add(
+        #     sink=sys.stdout,    # 输出到标准输出
+        #     level=self.level,    # 设置日志级别
+        #     rotation="100 MB",   # 设置日志文件大小为100MB
+        # )
         
-        # 文件日志配置示例
-        # logger.add("my_project.log", level=level, rotation="100 MB")  # 输出日志到文件，当文件达到100MB时轮转
+        # 添加文件日志
+        loguru_logger.add(
+            sink=f"{settings.LOGS_ROOT}/app.log",  # 日志文件路径
+            level=self.level,
+            rotation="100 MB",
+            encoding="utf-8"
+        )
 
         return loguru_logger
 
