@@ -42,6 +42,7 @@ NoteMate/
 │   │   ├── api/               # RESTful API
 │   │   ├── core/              # 核心配置
 │   │   ├── models/            # 数据模型
+│   │   ├── controller/        # 业务逻辑
 │   │   ├── schemas/           # 数据验证
 │   │   └── utils/             # 工具集
 │   └── tests/                 # 单元测试
@@ -56,6 +57,16 @@ NoteMate/
     ├── Dockerfile           # 容器构建
     └── requirements.txt     # 依赖管理
 ```
+![image](https://github.com/user-attachments/assets/486fe601-21e0-4f0a-8254-6c749b99ad78)
+![image](https://github.com/user-attachments/assets/201b4ae1-b044-409f-989d-8189e9c11c45)
+![image](https://github.com/user-attachments/assets/5a60357b-bf5d-49e5-a653-36227001fab1)
+![image](https://github.com/user-attachments/assets/b0680971-0b1d-4538-8e83-735e166c8811)
+![image](https://github.com/user-attachments/assets/dbaec2a9-e934-4b05-978f-13528d69d166)
+![image](https://github.com/user-attachments/assets/6b183696-8881-43d0-83e0-e3396b061b5f)
+
+
+
+
 
 ## 🚀 快速开始
 
