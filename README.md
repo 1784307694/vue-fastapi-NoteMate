@@ -63,6 +63,9 @@ NoteMate/
 ![image](https://github.com/user-attachments/assets/b0680971-0b1d-4538-8e83-735e166c8811)
 ![image](https://github.com/user-attachments/assets/dbaec2a9-e934-4b05-978f-13528d69d166)
 ![image](https://github.com/user-attachments/assets/6b183696-8881-43d0-83e0-e3396b061b5f)
+![image](https://github.com/user-attachments/assets/236502f9-332e-4991-81a2-eb6702a715f5)
+![image](https://github.com/user-attachments/assets/4c825d02-62de-4f14-9dba-8281570da961)
+![image](https://github.com/user-attachments/assets/817b1b05-54fb-48dc-b224-3776a3efbbec)
 
 
 
