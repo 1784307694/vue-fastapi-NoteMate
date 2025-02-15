@@ -1,6 +1,6 @@
 # NoteMate
 
-NoteMate是一个基于 FastAPI + Vue3 + Element Plus 的现代化全栈开发平台，采用前后端分离架构，融合了 RBAC 权限管理、动态路由和 JWT 鉴权等企业级特性。
+NoteMate是一个基于 FastAPI + Vue3 + Element Plus 的现代化全栈开发的知识付费平台，采用前后端分离架构，融合了 RBAC 权限管理、动态路由和 JWT 鉴权等企业级特性。
 
 前端地址：
 ```
